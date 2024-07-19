@@ -1,0 +1,95 @@
+package ivangka.main;
+
+import java.util.*;
+
+public class DoSomethingWithWordPair {
+    private static final Scanner SCANNER = new Scanner(System.in);
+    private static final Random RANDOM = new Random();
+
+    public static void viewWholeDictionary(List<WordPair> wordPairs) {
+        int i = 0;
+        System.out.println("\n\n");
+        System.out.println("=============================================");
+        for (WordPair wordPair : wordPairs) {
+            System.out.println(wordPair);
+            if (++i % 100 == 0) System.out.println();
+        }
+        System.out.println("=============================================");
+        System.out.println();
+    }
+
+    public static void getAllPairs(List<WordPair> allWordPairs) {
+        List<WordPair> allPairsCopy = new LinkedList<>(allWordPairs);
+        Collections.shuffle(allPairsCopy);
+        pairsIterator(allPairsCopy);
+    }
+
+    public static void getSubPairs(List<WordPair> allWordPairs, int start, int end) {
+        List<WordPair> subWordPairs = new LinkedList<>(allWordPairs.subList(start - 1, end));
+        Collections.shuffle(subWordPairs);
+        pairsIterator(subWordPairs);
+    }
+
+    private static void pairsIterator(List<WordPair> wordPairs) {
+        int count = 0;
+        List<WordPair> wordPairsToRepeat = new LinkedList<>();
+        System.out.println("\n[Press Enter if you know the translation]");
+        System.out.println("[\"0\" if you don't know the translation]");
+        System.out.println("[\"-1\" if you don't know the translation of the previous word]");
+        System.out.println("[\"stop\" to stop this range]");
+        System.out.println("---------------------------------------------");
+        WordPair previousWordPair = null;
+
+        for (WordPair wordPair : wordPairs) {
+            System.out.println(">> " + (++count) + "/" + wordPairs.size() + " <<");
+            int temp = RANDOM.nextInt(2);
+            if (temp == 0) {
+                System.out.print(wordPair.getIndex() + "." + wordPair.getInEnglish() + "- ");
+                String tempString = SCANNER.nextLine();
+                if (tempString.equals("-1")) {
+                    if (previousWordPair != null) wordPairsToRepeat.add(previousWordPair);
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInEnglish() + "- ");
+                    tempString = SCANNER.nextLine();
+                }
+                if (tempString.equals("stop")) return;
+                else if (tempString.equals("0")) wordPairsToRepeat.add(wordPair);
+                System.out.println(wordPair.getInRussian());
+            } else {
+                System.out.print(wordPair.getIndex() + "." + wordPair.getInRussian() + " - ");
+                String tempString = SCANNER.nextLine();
+                if (tempString.equals("-1")) {
+                    if (previousWordPair != null) wordPairsToRepeat.add(previousWordPair);
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInRussian() + " - ");
+                    tempString = SCANNER.nextLine();
+                }
+                if (tempString.equals("stop")) return;
+                else if (tempString.equals("0")) wordPairsToRepeat.add(wordPair);
+                System.out.println(wordPair.getInEnglish());
+            }
+            System.out.println("---------------------------------------------");
+            previousWordPair = wordPair;
+        }
+
+        if (!wordPairsToRepeat.isEmpty()) {
+            count = 0;
+            System.out.println("\nWord pairs to repeat:");
+            System.out.println("---------------------------------------------");
+            for (WordPair wordPair : wordPairsToRepeat) {
+                System.out.println(">> " + (++count) + "/" + wordPairsToRepeat.size() + " <<");
+                int temp = RANDOM.nextInt(2);
+                if (temp == 0) {
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInEnglish() + "- ");
+                    String tempString = SCANNER.nextLine();
+                    if (tempString.equals("stop")) return;
+                    System.out.println(wordPair.getInRussian());
+                } else {
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInRussian() + " - ");
+                    String tempString = SCANNER.nextLine();
+                    if (tempString.equals("stop")) return;
+                    System.out.println(wordPair.getInEnglish());
+                }
+                System.out.println("---------------------------------------------");
+            }
+        }
+    }
+}

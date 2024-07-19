@@ -1,0 +1,44 @@
+1 fair [feə(r)] честный
+2 common [ˈkɒmən] обычный
+3 eye [aɪ] глаз
+4 weight [weɪt] вес 
+5 adult [ˈædʌlt] взрослый
+6 he [hiː] он
+7 fist [fɪst] кулак
+8 wrist [rɪst] запястье 
+9 thin [θɪn] худой
+10 throat [θrəʊt] горло
+11 it [ɪt] оно
+12 hair [heə(r)] волосы
+13 to touch [tʌtʃ] трогать
+14 nervous [ˈnɜːvəs] нервный
+15 arm [ɑːm] рука
+16 attractive [əˈtræktɪv] привлекательный
+17 nail [neɪl] ноготь
+18 freckles [ˈfreklz] веснушки
+19 intelligent [ɪnˈtelɪdʒənt] умный
+20 lucky [ˈlʌki] удачливый
+21 boy [bɔɪ] мальчик
+22 careful [ˈkeəfl] осторожный
+23 people [ˈpiːpl] люди
+24 birth [bɜːθ] рождение
+25 friendly [ˈfrendli] дружелюбный
+26 blond [blɒnd] белокурый
+27 greedy [ˈɡriːdi] жадный
+28 to hold [həʊld] держать
+29 calm [kɑːm] спокойный
+30 chest [tʃest] грудь
+31 mouth [maʊθ] рот
+32 patient [ˈpeɪʃənt] терпеливый
+33 kidney [ˈkɪdni] почка
+34 proud [praʊd] гордый
+35 skeleton [ˈskelɪtn] скелет
+36 straight [streɪt] прямой
+37 thumb [θʌm] большой палец
+38 body [ˈbɒdɪ] тело
+39 round [raʊnd] круглый
+40 youth [juːθ] молодежь, молодость
+41 boring [ˈbɔːrɪŋ] скучный
+42 brain [breɪn] мозг
+43 ear [ɪə(r)] ухо
+44 angry [ˈæŋɡri] злой
