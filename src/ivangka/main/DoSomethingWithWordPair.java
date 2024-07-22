@@ -88,12 +88,12 @@ public class DoSomethingWithWordPair {
 
             if (temp == 0) {
 
-                System.out.print(wordPair.getIndex() + "." + wordPair.getInEnglish() + "- ");
+                System.out.print(wordPair.getIndex() + "." + wordPair.getInFirstLanguage() + "- ");
                 String tempString = SCANNER.nextLine();
 
                 if (tempString.equals("-1")) {
                     if (previousWordPair != null) wordPairsToRepeat.add(previousWordPair);
-                    System.out.print(wordPair.getIndex() + "." + wordPair.getInEnglish() + "- ");
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInFirstLanguage() + "- ");
                     tempString = SCANNER.nextLine();
                 }
 
@@ -103,22 +103,22 @@ public class DoSomethingWithWordPair {
                     wordPairsToRepeat.add(wordPair);
                 }
 
-                System.out.println(wordPair.getInRussian());
+                System.out.println(wordPair.getInSecondLanguage());
 
             } else {
 
-                System.out.print(wordPair.getIndex() + "." + wordPair.getInRussian() + " - ");
+                System.out.print(wordPair.getIndex() + "." + wordPair.getInSecondLanguage() + " - ");
                 String tempString = SCANNER.nextLine();
 
                 if (tempString.equals("-1")) {
                     if (previousWordPair != null) wordPairsToRepeat.add(previousWordPair);
-                    System.out.print(wordPair.getIndex() + "." + wordPair.getInRussian() + " - ");
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInSecondLanguage() + " - ");
                     tempString = SCANNER.nextLine();
                 }
 
                 if (tempString.equals("stop")) return;
                 else if (tempString.equals("0")) wordPairsToRepeat.add(wordPair);
-                System.out.println(wordPair.getInEnglish());
+                System.out.println(wordPair.getInFirstLanguage());
 
             }
 
@@ -140,17 +140,17 @@ public class DoSomethingWithWordPair {
 
                 if (temp == 0) {
 
-                    System.out.print(wordPair.getIndex() + "." + wordPair.getInEnglish() + "- ");
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInFirstLanguage() + "- ");
                     String tempString = SCANNER.nextLine();
                     if (tempString.equals("stop")) return;
-                    System.out.println(wordPair.getInRussian());
+                    System.out.println(wordPair.getInSecondLanguage());
 
                 } else {
 
-                    System.out.print(wordPair.getIndex() + "." + wordPair.getInRussian() + " - ");
+                    System.out.print(wordPair.getIndex() + "." + wordPair.getInSecondLanguage() + " - ");
                     String tempString = SCANNER.nextLine();
                     if (tempString.equals("stop")) return;
-                    System.out.println(wordPair.getInEnglish());
+                    System.out.println(wordPair.getInFirstLanguage());
 
                 }
 

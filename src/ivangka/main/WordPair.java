@@ -16,9 +16,9 @@ public class WordPair {
     private final int index;
 
     /**
-     * The word in English.
+     * The word in first language.
      */
-    private final String inEnglish;
+    private final String firstLanguage;
 
     /**
      * The transcription of the word.
@@ -26,9 +26,9 @@ public class WordPair {
     private final String transcription;
 
     /**
-     * The word in Russian.
+     * The word in second language.
      */
-    private final String inRussian;
+    private final String secondLanguage;
 
     /**
      * The rating of the word pair.
@@ -38,21 +38,21 @@ public class WordPair {
     /**
      * Constructs a new WordPair with the specified details.
      *
-     * @param wholeString   the whole string representation of the word pair
-     * @param index         the index of the word pair
-     * @param inEnglish     the word in English
-     * @param transcription the transcription of the word
-     * @param inRussian     the word in Russian
-     * @param rating        the rating of the word pair
+     * @param wholeString    the whole string representation of the word pair
+     * @param index          the index of the word pair
+     * @param firstLanguage  the word in first language
+     * @param transcription  the transcription of the word
+     * @param secondLanguage the word in second language
+     * @param rating         the rating of the word pair
      */
-    public WordPair(String wholeString, int index, String inEnglish,
-                    String transcription, String inRussian, int rating) {
+    public WordPair(String wholeString, int index, String firstLanguage,
+                    String transcription, String secondLanguage, int rating) {
 
         this.wholeString = wholeString;
         this.index = index;
-        this.inEnglish = inEnglish;
+        this.firstLanguage = firstLanguage;
         this.transcription = transcription;
-        this.inRussian = inRussian;
+        this.secondLanguage = secondLanguage;
         this.rating = rating;
 
     }
@@ -67,21 +67,21 @@ public class WordPair {
     }
 
     /**
-     * Gets the word in English.
+     * Gets the word in first language.
      *
-     * @return the word in English
+     * @return the word in first language
      */
-    public String getInEnglish() {
-        return inEnglish;
+    public String getInFirstLanguage() {
+        return firstLanguage;
     }
 
     /**
-     * Gets the word in Russian.
+     * Gets the word in second language.
      *
-     * @return the word in Russian
+     * @return the word in second language
      */
-    public String getInRussian() {
-        return inRussian;
+    public String getInSecondLanguage() {
+        return secondLanguage;
     }
 
     /**
@@ -136,7 +136,7 @@ public class WordPair {
      */
     @Override
     public String toString() {
-        return index + "." + inEnglish + "-" + inRussian;
+        return index + "." + firstLanguage + "-" + secondLanguage;
     }
 
 }
