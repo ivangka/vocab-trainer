@@ -12,9 +12,9 @@ The program sequentially displays the words added by the user in the file words.
 
 ## Project Structure
 
-- **`WordPair` class**: Represents a word pair with its details and rating.
-- **`DoSomethingWithWordPair` class**: Provides utility methods for operations on word pairs such as viewing, shuffling, and interacting with word pairs.
-- **`Main` class**: The entry point of the application, handles file operations and user interactions.
+- **`WordPair` class:** Represents a word pair with its details and rating.
+- **`DoSomethingWithWordPair` class:** Provides utility methods for operations on word pairs such as viewing, shuffling, and interacting with word pairs.
+- **`Main` class:** The entry point of the application, handles file operations and user interactions.
 
 ## Installation
 
