@@ -4,6 +4,8 @@ import java.util.*;
 
 /**
  * Utility class for operations on word pairs.
+ *
+ * @author ivangka
  */
 public class DoSomethingWithWordPair {
 

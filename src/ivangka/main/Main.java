@@ -9,6 +9,8 @@ import java.util.regex.Pattern;
 
 /**
  * Main class for the application that manages word pairs for learning foreign languages.
+ *
+ * @author ivangka
  */
 public class Main {
 

@@ -2,6 +2,8 @@ package ivangka.main;
 
 /**
  * Represents a word pair with its details and rating.
+ *
+ * @author ivangka
  */
 public class WordPair {
 
